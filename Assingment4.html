@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 4</title>
+    <link rel="icon" href="assets\Assignment2.png">
+    <style media="screen">
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    }
+    .main{
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1{
+      color: #3e71ab;
+      margin: 1rem;
+    }
+    input{
+      height: 2rem;
+      width:15rem;
+      margin: 1rem;
+      font-size: 1rem;
+      border: 2px solid red;
+      text-align: center;
+    }
+    button{
+      background-color:#523eab;
+      padding: 1rem 4rem;
+      border: 2px solid #05d2ed;
+      border-radius: 10px;
+      font-size: 1rem;
+      margin: 1rem;
+      color: white;
+    }
+    p{
+      display: none;
+      font-size: 1.5rem;
+    }
+    button:hover{
+      background-color:white;
+      border: 2px solid black;
+      color: black;
+    }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="main">
+      <h1>Assignment 4</h1>
+      <input type="text" name="" placeholder="Enter A Value">
+      <p></p>
+      <button type="button" name="Calculate">Click Here</button>
+    </div>
+
+ <script type="text/javascript">
+ let Button=document.querySelector("button")
+ let Output=document.querySelector("p")
+ let Answer=0
+ Button.addEventListener("click", function(){
+ let UserInput=document.querySelector("input").value
+ if(UserInput.length==0)
+ {alert("ENTER A Value");}
+ else if(!isNaN(UserInput)){
+   Answer=UserInput.split("").reverse().join("")
+   Output.innerHTML = Answer;
+   Output.style.display="block"
+ }
+ else{
+ UserInput = UserInput.toUpperCase();
+ for(let i=0;i < UserInput.length; i++){
+   var chr = UserInput.charAt(i);
+   if(chr == 'A' || chr == 'E' || chr == 'I' || chr == 'O' || chr == 'U')
+   {
+     Output.innerHTML = "The position of the left most vowel is "+(i+1);
+     Output.style.display="block"
+     break;
+   }
+ }
+ }
+ });
+ </script>
+  </body>
+</html>
