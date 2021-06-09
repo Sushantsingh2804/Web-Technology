@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Squares and Cubes</title>
+    <link rel="icon" href="assets\Assignment2.png">
+    <style media="screen">
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    }
+    .main{
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    h1{
+      color: #3e71ab;
+      margin: 1rem;
+    }
+    table{
+      border: 1px solid #dedede;
+    }
+    th,td{
+      border: 1px solid #3e71ab;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+    }
+    </style>
+    <link rel="stylesheet" href="D:\Educating-Schmeducating\STES001\class\new.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="main">
+      <h1>Squares and Cubes From 0 to 10</h1>
+      <table>
+        <thead>
+          <th>Number</th>
+          <th>Square</th>
+          <th>Cube</th>
+        </thead>
+      </table>
+    </div>
+
+ <script type="text/javascript">
+
+ let Table=document.querySelector("table")
+ for (let i=1;i<=10;i++){
+   var row = Table.insertRow(i);
+   var cell1 = row.insertCell(0);
+   var cell2 = row.insertCell(1);
+   var cell3 = row.insertCell(2);
+   cell1.innerHTML = (i);
+   cell2.innerHTML = (i)**2;
+   cell3.innerHTML = (i)**3;
+ }
+
+ </script>
+  </body>
+</html>
